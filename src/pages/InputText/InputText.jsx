@@ -4,10 +4,8 @@ import { withStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import { SelectOption, RadioField, Button, MathLogic } from '../../component';
-// Component styles
 import styles from './styles';
 
-// let yup = require('yup');
  function Validate() {
 return yup.object().shape({
   value: yup.string()
@@ -69,7 +67,6 @@ class Form extends Component {
         this.setState({ cricketRole: event.target.value, touched: {...touched,[field]: true}}, () =>{this.handleValidate(field)});
     }
     handleFootRoleChange = field => (event) => {
-        console.log(field, '????????????????')
         const { touched } = this.state;
         this.setState({ footballRole: event.target.value, touched: {...touched,[field]: true}}, () =>{this.handleValidate(field)});
     }
@@ -89,17 +86,14 @@ class Form extends Component {
         const schema = Validate();
         schema.validate({value, game, footballRole, cricketRole},{abortEarly: false})
         .then(() => {
-            console.log('>>>>>>>>>>>>', error)
             this.setState({error:{ ...error,[field]: ''}})
         }).catch((err) => {
-            console.log('>>>>>>>>>>sss>>', err, error)
             err.inner.forEach((errors) => {
                 if (errors.path === field) {
                     this.setState({error:{ ...error,[field]: errors.message }})
                 }
             });
         if (!(err.inner.some(err => err.path === field))) {
-            console.log('in>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<', err)
             this.setState({
             error: { ...error, [field]: '' },
             });
