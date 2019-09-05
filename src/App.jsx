@@ -36,7 +36,7 @@ const App = () => (
       />
       <AuthRoute
       exact
-       path="/trainee"
+       path="/"
       component={Trainee}
       />
        <AuthRoute
@@ -49,9 +49,9 @@ const App = () => (
       path="/children-demo"
       component={ChildrenDemo}
       />
-      <AuthRoute
+      {/* <AuthRoute
        component={NotFound}
-      />
+      /> */}
   </div>
   </Switch>
   </BrowserRouter>
