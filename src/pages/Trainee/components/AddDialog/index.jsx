@@ -192,7 +192,7 @@ hasTouched = () => {
             {this.hasTouched() ?     <Button onClick={this.handleClose} color="primary">
                 Submit
               </Button> :
-                <Button variant="contained" color="danger" disabled>Submit</Button> }
+                <Button variant="contained" color="danger" disabled>submit</Button> }
             </DialogActions>
           </Dialog>
         </div>
