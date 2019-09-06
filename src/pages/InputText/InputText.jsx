@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { withStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
-import { SelectOption, RadioField, Button, MathLogic } from '../../component';
+import { SelectOption, RadioField, Button } from '../../component';
 import styles from './styles';
 
  function Validate() {
@@ -102,7 +102,7 @@ class Form extends Component {
     }
 
     render() {
-        const { value, game, cricketRole, footballRole, error, touched } = this.state;
+        const { value, game, cricketRole, footballRole, error } = this.state;
         const { classes } = this.props;
         console.log({"value": value, "Sports": game, "CricketRole": cricketRole, "FootballRole": footballRole, "error": error});
         return (

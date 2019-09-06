@@ -98,7 +98,6 @@ hasTouched = () => {
             console.log('ll', error);
         });
         if (!(err.inner.some(err => err.path === field))) {
-            console.log('in>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<', err)
             this.setState({
             error: { ...error, [field]: '' },
             });
@@ -107,7 +106,7 @@ hasTouched = () => {
 }
 
  render () {
-     const { open, name, email, pwd, Cpwd, touched, error } = this.state;
+     const { open, name, email, pwd, Cpwd, error } = this.state;
      console.log({"Name": name, "EMail": email, "password": pwd, "Confirm password": Cpwd})
     return (
         <div>

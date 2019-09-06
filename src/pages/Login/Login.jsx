@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import styles from './styles';
-import { mergeClasses } from '@material-ui/styles';
 
 function validate() {
     return yup.object().shape({
@@ -80,12 +79,12 @@ hasTouched = () => {
 }
 
  render () {
-     const { email, pwd, touched, error } = this.state;
+     const { email, pwd, error } = this.state;
      const { classes } = this.props;
      console.log({"EMail": email, "password": pwd })
     return (
          <div className={classes.root}>
-         <img src="./0.png" height="90px" />
+         <img src="./0.png" height="90px" alt="image" />
           <Grid container spacing={3}>
             <Grid item xs={12}>
             <TextField

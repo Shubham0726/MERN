@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Calculation = (first, second, operator) => {
     switch (operator) {

@@ -44,6 +44,7 @@ export default function ButtonAppBar() {
           <Link to="/trainee" className={classes.link}>TRAINEE</Link>
           <Link to="/input-demo" className={classes.link}>INPUT DEMO</Link>
           <Link to="/children-demo" className={classes.link}>CHILDREN DEMO</Link>
+          <Link to="/hooks-demo" className={classes.link}>HOOKS DEMO</Link>
           <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
